@@ -2,7 +2,6 @@ import React from 'react';
 import MarketSchedule from './MarketSchedule';
 
 var masterMarketScheduleList = [
-  // actual data goes here
   {
     day: "Sunday",
     location: "Lents International",
@@ -42,19 +41,25 @@ var masterMarketScheduleList = [
 ]
 
 function MarketScheduleList(){
-  // inline css here
+  var marketScheduleListStyle = {
+    paddingLeft: 20
+  }
   return(
     <div>
       <hr/>
-      {masterMarketScheduleList.map((marketschedule, index) =>
-        <MarketSchedule
-          day={marketschedule.day}
-          location={marketschedule.location}
-          hours={marketschedule.hours}
-          booth={marketschedule.booth}
-          key={index}
-          />
-      )}
+      <h2>Weekly Schedule</h2>
+      <div style={marketScheduleListStyle}>
+
+        {masterMarketScheduleList.map((marketschedule, index) =>
+          <MarketSchedule
+            day={marketschedule.day}
+            location={marketschedule.location}
+            hours={marketschedule.hours}
+            booth={marketschedule.booth}
+            key={index}
+            />
+        )}
+      </div>
     </div>
   );
 }
