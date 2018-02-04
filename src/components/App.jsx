@@ -1,4 +1,6 @@
 import React from 'react';
+import {Switch, Route} from 'react-router-dom';
+
 import Header from './Header';
 import MarketScheduleList from './MarketScheduleList';
 import MonthlyProduceList from './MonthlyProduceList';
@@ -7,24 +9,10 @@ function App(){
   return (
     <div>
       <Header/>
-      {/* inserting divs for rows and columns for now but no React Bootstrap CSS?? */}
-      <div className="row">
-        <div className="col-xs-1">
-        </div>
-        <div className="col-xs-4">
-          <MarketScheduleList/>
-        </div>
-        <div className="col-xs-1">
-          <br/><br/>
-        </div>
-        <div className="col-xs-4">
-          <hr/>
-          <MonthlyProduceList/>
-        </div>
-        <div className="col-xs-1">
-        </div>
-
-      </div>
+        <Switch>
+          <Route exact path='/' component={MarketScheduleList} />
+          <Route path='/monthlyproduce' component={MonthlyProduceList} />
+        </Switch>
     </div>
   );
 }
