@@ -47,7 +47,7 @@ function MarketScheduleList(){
   return(
     <div>
       <hr/>
-      <h2>Weekly Schedule</h2>
+      <h2>Upcoming Market Appearances</h2>
       <div style={marketScheduleListStyle}>
 
         {masterMarketScheduleList.map((marketschedule, index) =>

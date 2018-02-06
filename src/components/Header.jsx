@@ -5,7 +5,7 @@ function Header(){
   return(
     <div>
       <h1>Avery's Organic Farm</h1>
-      <Link to="/">Home</Link> | <Link to="/monthlyproduce">Monthly Produce Schedule</Link>
+      <Link to="/">Home</Link>  |  <Link to="/monthlyproduce">Monthly Produce Schedule</Link>  |  <Link to="/comments">Customer Comments</Link>
     </div>
   );
 }
